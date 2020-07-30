@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
 
 #define TIME 3
@@ -16,7 +15,7 @@ int main(int argc, char const *argv[])
     read_array(array, length);
 
     printf("\n");
-    system("pause");
+    //system("pause");
     return 0;
 }
 
