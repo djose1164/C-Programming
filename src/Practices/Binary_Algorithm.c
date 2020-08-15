@@ -11,8 +11,7 @@ int main(int argc, char const *argv[])
         5, 8, 0, 343, 234, 0, -89, -952
     };
 
-    int searchValue = -89;
-    int aux = 0;
+    int searchValue = -89, aux = 0;
     int pointer1, pointer2, pointerM, found;
     found = 0;
     pointer1 = 1;
