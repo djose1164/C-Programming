@@ -8,7 +8,7 @@ typedef struct
     float price;
     int publication_year, pages;
     bool status;
-}Book;
+} Book;
 
 int main(int argc, char const *argv[])
 {
@@ -19,7 +19,6 @@ int main(int argc, char const *argv[])
     libro.pages = 450;
     libro.status = true;
 
-
     printf("The book's title is: %s.\n", libro.title);
     printf("The book's price is: %f.\n", libro.price);
     printf("The book's year of publication is: %d.\n", libro.publication_year);
@@ -27,14 +26,11 @@ int main(int argc, char const *argv[])
     if (libro.status)
     {
         printf("The book's status is in: service\n");
-
     }
     else
     {
         printf("The book's status is: out of service\n");
     }
-    
-    
+
     return 0;
 }
-
