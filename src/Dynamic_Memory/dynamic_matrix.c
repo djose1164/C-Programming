@@ -16,7 +16,8 @@ int main(int argc, char const *argv[])
 
         printf("Enter the numbers of columns: ");
         scanf("%d", &columns);
-    } while (rows < 1 || columns < 1);
+    } 
+    while (rows < 1 || columns < 1);
 
     // Creation of the first matrix.
     matrix = malloc(rows * sizeof(int));
@@ -24,6 +25,7 @@ int main(int argc, char const *argv[])
     {
         matrix[i] = malloc(columns * sizeof(int));
 
+        // Verifaction of memory.
         if (!matrix[i])
         {
             fprintf(stderr, "Memory couldn't be allocated.\n");
@@ -33,6 +35,7 @@ int main(int argc, char const *argv[])
 
     for (size_t i = 0; i < rows; i++)
     {
+        // Input the data.
         for (size_t j = 0; j < columns; j++)
         {
             printf("Enter the numbers for the frist matrix at position[%zu, %zu]: ", i, j);
@@ -46,6 +49,7 @@ int main(int argc, char const *argv[])
     {
         matrix2[i] = malloc(columns * sizeof(int));
 
+        // Verifaction of memory.
         if (!matrix2[i])
         {
             fprintf(stderr, "Memory couldn't be allocated.\n");
@@ -53,6 +57,7 @@ int main(int argc, char const *argv[])
         }
     }
 
+    // Making the copy from matrix to matrix2.
     for (size_t i = 0; i < rows; i++)
     {
         for (size_t j = 0; j < columns; j++)
@@ -61,6 +66,7 @@ int main(int argc, char const *argv[])
         }
     }
 
+    // Reading matrix2
     for (size_t i = 0; i < rows; i++)
     {
         for (size_t j = 0; j < columns; j++)
@@ -71,6 +77,7 @@ int main(int argc, char const *argv[])
         printf("\n");
     }
 
+    // Freeing up memory space.
     free(matrix);
     free(matrix2);
 
