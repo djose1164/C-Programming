@@ -80,10 +80,10 @@ void delete_item(int array[], int max)
     }
     else
     {
-        printf("Could've not allocate memory.\n");
+        printf("Memory couldn't be allocated.\n");
     }
 
-    array = (int *)realloc(array, max * sizeof(int));
+    array = realloc(array, max * sizeof(int));
 
     if (array != NULL)
     {
