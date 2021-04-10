@@ -1,6 +1,7 @@
 #include "Person.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <sqlite3.h>
 
 int main(int argc, char const *argv[])
 {
@@ -12,6 +13,5 @@ int main(int argc, char const *argv[])
     person->set_profession("Mechatronics student");
 
     printf("Your name is: %s.\nYour age is: %d.\nYou live in: %s.\nYou are a/an: %s.\n", get_name(), get_age(), get_address(), get_profession());
-
     return 0;
 }
